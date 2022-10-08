@@ -158,7 +158,7 @@ h6 {
   background-color: rgba(0, 0, 0, 0.8);
   height: 100%;
   background: $main-bg-img no-repeat center top/cover;
-  height: 93.4vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -558,7 +558,12 @@ h6 {
     }
   }
   .biographie {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blog-articles {
+    margin-top: 16rem;
+    position: relative;
+    top: 100px;
   }
 }
 
