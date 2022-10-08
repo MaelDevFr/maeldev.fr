@@ -1,0 +1,586 @@
+// sass --watch ./main.scss:./assets/css/main.css
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700&display=swap");
+
+$main-text-color: #f4f4f4;
+$second-text-color: #1d1d1d;
+$web-width: 1280px;
+$primary-color: #7dff31;
+$main-bg-img: url("../img/pc_1280\ copie.jpg");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: $primary_color;
+}
+ul {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  text-transform: none;
+}
+.container {
+  max-width: $web_width;
+  margin: auto;
+  overflow: hidden;
+}
+.text-center {
+  text-align: center;
+}
+.p {
+  &_0 {
+    padding: 5rem;
+  }
+  &_1 {
+    padding: 4rem;
+  }
+  &_2 {
+    padding: 3rem;
+  }
+  &_3 {
+    padding: 2rem;
+  }
+  &_4 {
+    padding: 1rem;
+  }
+}
+.ptb {
+  &_0 {
+    padding: 5rem 0;
+  }
+  &_1 {
+    padding: 4rem 0;
+  }
+  &_2 {
+    padding: 3rem 0;
+  }
+  &_3 {
+    padding: 2rem 0;
+  }
+  &_4 {
+    padding: 1rem 0;
+  }
+}
+.section_separation {
+  width: 50%;
+  margin: 2.5rem auto;
+  color: $main-text-color;
+}
+::selection {
+  color: $primary-color;
+}
+
+.header-content {
+  position: fixed;
+  width: 100%;
+  //height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $second-text-color;
+  padding: 0.5rem 1rem;
+
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: #fff;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px transparent solid;
+    transition: border-color 1s;
+
+    .logo-title {
+      font-family: "Pacifico", cursive;
+      font-size: 1.6rem;
+      padding: 5px 0 0 0;
+      color: #fff;
+      text-transform: none;
+    }
+
+    &:hover {
+      border-color: $primary-color;
+    }
+    &.active-page {
+      border-color: $primary-color;
+    }
+  }
+}
+
+%btn_prop_shared {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.7s;
+}
+.btn {
+  &_cta,
+  &-projects,
+  &-project-section {
+    @extend %btn_prop_shared;
+    color: $second-text-color;
+    background-color: $primary-color;
+
+    &:hover {
+      color: $primary-color;
+      background-color: $second-text-color;
+      border: $second-text-color;
+    }
+    &_projects {
+      padding: 0.8rem 2.6rem;
+    }
+    &:hover {
+      background-color: $main-text-color;
+      color: $second-text-color;
+      border: 1px solid $second-text-color;
+    }
+  }
+}
+
+.bg-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  background: $main-bg-img no-repeat center top/cover;
+  height: 93.4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5.4rem;
+  color: $main-text-color;
+}
+.bg-error {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  background: url("../img/bg copie.jpg") no-repeat center top/cover;
+  height: 93.4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5.4rem;
+  color: $main-text-color;
+}
+
+.biographie {
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  div {
+    margin: 0 0.5rem;
+  }
+
+  .fas,
+  .fab {
+    color: $primary-color;
+    background-color: $second-text-color;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 50%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .projects-img {
+    background: url(./assets/img/pc_640\ copie.jpg);
+  }
+  .img-projects {
+    height: 245px;
+    width: 635px;
+  }
+
+  .projects-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $second-text-color;
+    color: $main-text-color;
+
+    ul {
+      margin-bottom: 2.5rem;
+      .fas,
+      .far {
+        padding-bottom: 0.6rem;
+      }
+      .projects_title {
+        padding-bottom: 0.5rem;
+      }
+      .projects_number {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  a {
+    margin: auto;
+    grid-column: 1/4;
+  }
+}
+
+.about_section_technologies {
+  background-color: $main-text-color;
+  color: $second-text-color;
+
+  .section_text {
+    margin-bottom: 1.5rem;
+  }
+  .progress_bar {
+    height: 1rem;
+    background-color: $main-text-color;
+    border-radius: 4px;
+    margin-bottom: 0.9rem;
+
+    div {
+      height: 100%;
+      background-color: $primary-color;
+      border-radius: 4px;
+      margin-top: 0.1rem;
+    }
+
+    &_10 {
+      width: 10%;
+    }
+    &_20 {
+      width: 20%;
+    }
+    &_30 {
+      width: 30%;
+    }
+    &_40 {
+      width: 40%;
+    }
+    &_50 {
+      width: 50%;
+    }
+    &_60 {
+      width: 60%;
+    }
+    &_70 {
+      width: 70%;
+    }
+    &_80 {
+      width: 80%;
+    }
+    &_90 {
+      width: 90%;
+    }
+    &_100 {
+      width: 100%;
+    }
+  }
+
+  .technologies {
+    .fas {
+      color: $second-text-color;
+      background-color: $main-text-color;
+    }
+  }
+}
+
+.contact_section {
+  form {
+    width: 960px;
+    margin: auto;
+  }
+
+  .label_input_fields {
+    display: grid;
+    grid-template-areas: "name email" "message message";
+    grid-gap: 1.2rem;
+    margin-bottom: 0.8rem;
+
+    label {
+      display: block;
+      text-align: left;
+    }
+
+    input,
+    textarea {
+      border: 2px solid #d4d4d4;
+      border-radius: 5px;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      width: 100%;
+    }
+
+    .name_input {
+      grid-area: name;
+    }
+    .email_input {
+      grid-area: email;
+    }
+    .message_input {
+      grid-area: message;
+    }
+    .is_required::after {
+      content: "*";
+      color: #dc143c;
+      padding-left: 0.2rem;
+    }
+  }
+}
+.contact_info_section {
+  background-color: $second-text-color;
+  color: $main-text-color;
+
+  .contact_info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    i,
+    h3 {
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+
+.blog-section {
+  .blog-articles {
+    display: grid;
+    margin-top: 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    width: auto;
+  }
+}
+
+.code {
+  background-color: rgb(95, 94, 92);
+}
+
+.main-footer {
+  .footer-content {
+    color: $second-text-color;
+
+    .contact-footer {
+      margin-left: 3rem;
+    }
+  }
+}
+
+.how-create-a-good-website {
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .step {
+    text-decoration: underline;
+    font-size: large;
+  }
+}
+
+@media (max-width: 850px) {
+  .p {
+    &_0 {
+      padding: 2.5rem;
+    }
+    &_1 {
+      padding: 2rem;
+    }
+    &_2 {
+      padding: 1.5rem;
+    }
+    &_3 {
+      padding: 1rem;
+    }
+    &_4 {
+      padding: 0.5rem;
+    }
+  }
+  .ptb {
+    &_0 {
+      padding: 2.5rem 0;
+    }
+    &_1 {
+      padding: 2rem 0;
+    }
+    &_2 {
+      padding: 1.5rem 0;
+    }
+    &_3 {
+      padding: 1rem 0;
+    }
+    &_4 {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .header-content {
+    flex-direction: column;
+    justify-content: center;
+
+    li {
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      padding: 1rem;
+    }
+  }
+
+  // Page D'accueil
+
+  .projects {
+    display: block;
+
+    .projects_img {
+      display: none;
+    }
+    .projects_content {
+      display: block;
+    }
+  }
+
+  //Page contact
+
+  .contact_section {
+    form {
+      width: 100%;
+    }
+
+    .label_input_fields {
+      display: block;
+
+      label {
+        margin-top: 1.2rem;
+        padding: 0.9rem;
+      }
+      textarea {
+        margin-bottom: 1.4rem;
+      }
+
+      input,
+      textarea {
+        width: 90%;
+      }
+    }
+  }
+
+  .contact_info_section {
+    padding-bottom: 2.2rem;
+
+    .contact_info {
+      display: block;
+
+      .fas,
+      .fab {
+        margin-top: 1.7rem;
+      }
+    }
+  }
+
+  // Page Skills
+
+  .about_section_technologies {
+    .skills {
+      text-align: center;
+    }
+  }
+}
+.header-blog {
+  height: 3rem;
+  width: 100%;
+}
+.footer-blog {
+  height: 3rem;
+  width: 30rem;
+}
+.blog {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 1.5rem;
+  text-transform: none;
+
+  strong {
+    color: $primary-color;
+  }
+}
+
+@media (max-width: 1250px) {
+  //Page Projets
+
+  .projects-section {
+    .project {
+      display: block;
+    }
+  }
+
+  .code {
+    border: 1rem solid black;
+  }
+  // Footer
+
+  .main-footer {
+    margin: 0.6rem;
+
+    .footer-content {
+      .contact_footer {
+        margin: 0;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .header-blog {
+    height: 3rem;
+    width: 30rem;
+  }
+  .footer-blog {
+    height: 3rem;
+    width: 30rem;
+  }
+  .main-footer {
+    .footer-content {
+      font-size: 15px;
+    }
+  }
+  .biographie {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $second-text-color;
+    color: $main-text-color;
+  }
+  .main-footer {
+    .footer-content {
+      color: $main-text-color;
+
+      .contact-footer {
+        margin-left: 3rem;
+      }
+    }
+  }
+  .about_section_technologies {
+    background-color: $second-text-color;
+    color: $main-text-color;
+  }
+  .header-content {
+    background-color: #222020;
+  }
+}

@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteRule ^project project.html [NC]
+RewriteRule ^repos repos.html [NC]
+RewriteRule ^skills skills.html [NC]
+RewriteRule ^blog blog.html [NC]
+RewriteRule ^contact contact.php [NC]
+RewriteRule ^créer-un-bon-site-web créer-un-bon-site-web.html [NC]
+RewriteRule ^créer-une-404-personalisé créer-une-404-personalisé.html [NC]
+RewriteRule ^les-calls-to-actions les-calls-to-actions.html [NC]
+
+ErrorDocument  404  /erreur404.html
+ErrorDocument  500  /erreur500.html

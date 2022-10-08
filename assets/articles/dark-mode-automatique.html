@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="mael, Mael, Développeur Web" />
+    <meta
+      name="description"
+      content="Mon portfolio en tant que développeur web"
+    />
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/6a7d53791c.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maël Dev</title>
+  </head>
+  <body>
+    <nav class="header-content">
+      <a href="../../index.html">
+        <h1 class="logo-title">MD</h1>
+      </a>
+      <ul>
+        <li class="header"><a href="../sources/project.html">Projets</a></li>
+        <li class="header"><a href="../sources/skills.html">Skills</a></li>
+        <li class="header"><a href="../sources/contact.php">Contact</a></li>
+        <li class="header">
+          <a class="active-page" href="../sources/blog.html">Blog</a>
+        </li>
+      </ul>
+    </nav>
+    <br /><br /><br /><br /><br />
+    <h1 class="text-center">Comment créer un dark-mode automatique en CSS ?</h1>
+    <h5 class="text-center"><strong>3m de lecture</strong></h5>
+    <div class="blog">
+      <img
+        src="../img/dark-mode.jpg"
+        alt="Website's img"
+        width="100%"
+        height="520px"
+      />
+      <br /><br />
+      <strong class="step">Step 1 : Un fichier CSS : </strong><br /><br />
+      • Pour avoir votre dark-mode automatique, vous devez lier un fichier css à
+      un fichier HTML <br />
+      Ps : A noter que je part du principe que vous possédez les bases d'Html &
+      Css pour ce tuto. <br />
+      Vous devez insérer dans le fichier CSS le code suivant : <br /><br />
+      <div class="code text-center">
+        <br />
+        <h5>
+          @media (prefers-color-scheme: dark) {<br />
+          html{background-color: black;}<br />}
+        </h5>
+        <br />
+      </div>
+      <br />
+      • Et paf ! Si votre ordinateur à pour préférence le dark mode, <br />
+      le fond de votre page deviendra noire ! C'est pas magique juste du CSS !
+      <br /><br />
+      <strong class="step">Step 2 : Aller plus loin : </strong><br /><br />
+      • Évidemment vous pouvez aller plus loin avec cette option, <br />
+      vous pouvez changer la couleur du text, des animations en séléctionnant
+      les <br />
+      éléments html que vous voulez changer à l'intérieur de la media queries et
+      les changer.
+    </div>
+    <footer class="main-footer ptb_3">
+      <div class="footer-content container text-center">
+        <p>
+          Copyright &copy; 2022 Maël Dev. Tous droits réservés.
+          <span class="contact-footer"
+            >Email :
+            <a href="mailto:contact@maeldev.fr">contact@maeldev.fr</a></span
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
