@@ -58,14 +58,14 @@ if (isset($_POST['send'])) {
 
 <body>
     <nav class="header-content">
-        <a href="../../index.html">
+        <a href="../../index">
             <h1 class="logo-title">MD</h1>
         </a>
         <ul>
-            <li class="header"><a href="./project.html">Projets</a></li>
-            <li class="header"><a href="./skills.html">Skills</a></li>
-            <li class="header"><a class="active-page" href="./contact.html">Contact</a></li>
-            <li class="header"><a href="./blog.html">Blog</a></li>
+            <li class="header"><a href="./project">Projets</a></li>
+            <li class="header"><a href="./skills">Skills</a></li>
+            <li class="header"><a class="active-page" href="./contact.php">Contact</a></li>
+            <li class="header"><a href="./blog">Blog</a></li>
         </ul>
     </nav>
     <?php
