@@ -1,0 +1,14 @@
+#remove html file extension https://maeldev.fr/index.html
+# to https://maeldev.fr/home
+#remove html file extension https://maeldev.fr/assets/sources/project.html
+# to https://maeldev.fr/project.html
+#remove html file extension https://maeldev.fr/assets/sources/skills.html
+# to https://maeldev.fr/skills
+#remove html file extension https://maeldev.fr/assets/sources/contact.php
+# to https://maeldev.fr/contact
+#remove html file extension https://maeldev.fr/assets/sources/blog.html
+# to https://maeldev.fr/blog
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
