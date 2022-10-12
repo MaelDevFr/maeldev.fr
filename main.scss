@@ -344,6 +344,12 @@ h6 {
     }
   }
 }
+.alert-success {
+  color: $primary-color;
+}
+.alert-danger {
+  color: red;
+}
 .contact_info_section {
   background-color: $second-text-color;
   color: $main-text-color;

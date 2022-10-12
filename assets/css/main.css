@@ -247,6 +247,12 @@ h6 {
     color: #dc143c;
     padding-left: 0.2rem; }
 
+.alert-success {
+  color: #7dff31; }
+
+.alert-danger {
+  color: red; }
+
 .contact_info_section {
   background-color: #1d1d1d;
   color: #f4f4f4; }

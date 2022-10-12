@@ -1,43 +1,43 @@
 <?php
-session_start();
-if (isset($_POST['send'])) {
-    // extraction des variables
-    extract($_POST);
-    // verification de l'existence des variables
-    if (
-        isset($name) && $name != "" &&
-        isset($email) && $email != "" &&
-        isset($message) && $message != ""
-    ) {
-        // envoyé l'email
-        $to = "contact@maeldev.fr";
-        $subject = "Vous avez reçu un message de : " . $email;
+	if (isset($_POST["submit"])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+		$human = intval($_POST['human']);
+		$from = 'Demo Contact Form'; 
+		$to = 'contact@maeldev.fr'; 
+		$subject = 'Nouveau contact !';
+		
+		$body ="From: $name\n E-Mail: $email\n Message:\n $message";
 
-        $message = "
-        <p>Vous avez reçu un message de <strong>" . $email . "</strong></p>
-        <p><strong>Nom : " . $name . "</strong></p>
-        <p><strong>Message : " . $message . "</strong></p>
-        ";
+		// Check if name has been entered
+		if (!$_POST['name']) {
+			$errName = 'Veuillez rentrer votre nom';
+		}
+		
+		// Check if email has been entered and is valid
+		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			$errEmail = 'Veuillez entrer une adresse email valide';
+		}
+		
+		//Check if message has been entered
+		if (!$_POST['message']) {
+			$errMessage = 'Veuillez entrer votre message';
+		}
+		//Check if simple anti-bot test is correct
+		if ($human !== 5) {
+			$errHuman = 'Votre réponse est incorrecte';
+		}
 
-        // Always set content-type when sending HTML email
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-        // More headers
-        $headers .= 'From: <' . $email . '>' . "\r\n";
-
-        $send = mail($to, $subject, $message, $headers);
-        if ($send) {
-            $_SESSION['success_message'] = $info = "message envoyé !";
-        } else {
-            $info = "message non envoyé";
-        }
-    } else {
-        // Si elle sont vides
-        $info = "Veuillez remplir tous les champs !";
-    }
+// If there are no errors, send the email
+if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+	if (mail ($to, $subject, $body, $from)) {
+		$result='<div class="alert alert-success">Mail envoyé avec succès ! Merci à vous</div>';
+	} else {
+		$result='<div class="alert alert-danger">Désolé, il y a eu une erreur, veuillez ré-essayer plus tard.</div>';
+	}
 }
-
+	}
 ?>
 
 <!DOCTYPE html>
@@ -68,15 +68,6 @@ if (isset($_POST['send'])) {
             <li class="header"><a href="./blog">Blog</a></li>
         </ul>
     </nav>
-    <?php
-    // afficher le message de succès
-    if (isset($_SESSION['success_message'])) { ?>
-        <p class="request-message" style="color:green">
-            <?= $_SESSION['success_message'] ?>
-        </p>
-    <?php
-    }
-    ?>
     <section class="contact_section text-center ptb_3">
         <h2 class="section_title">Me Contacter</h2>
         <p class="section_text"></p>
@@ -84,18 +75,30 @@ if (isset($_POST['send'])) {
             <div class="label_input_fields">
                 <div class="name_input">
                     <label for="name" class="is_required">Nom :</label>
-                    <input name="name" type="text" id="name" placeholder="Votre nom..." required>
+                    <input name="name" type="text" id="name" placeholder="Votre nom...">
+                    <?php echo "<p class='text-danger'>$errName</p>";?>
                 </div>
                 <div class="email_input">
                     <label for="email" class="is_required">Mail :</label>
-                    <input name="email" type="email" id="email" placeholder="Votre EMail..." required>
+                    <input name="email" type="email" id="email" placeholder="Votre EMail...">
+                    <?php echo "<p class='text-danger'>$errEmail</p>";?>
                 </div>
                 <div class="message_input">
                     <label name="" for="message" class="is_required">Message :</label>
-                    <textarea name="message" type="text" id="message" placeholder="Votre Message..." required></textarea>
+                    <textarea name="message" type="text" id="message" placeholder="Votre Message..."><?php echo htmlspecialchars($_POST['message']);?></textarea>
+                    <?php echo "<p class='text-danger'>$errMessage</p>";?>
+                </div>
+                <div class="human_input">
+                    <label for="human" class="is_required">2 + 3 = ?</label>
+                    <input type="text" class="form-control" id="human" name="human" placeholder="Votre réponse">
+					<?php echo "<p class='text-danger'>$errHuman</p>";?>
                 </div>
             </div>
-            <input class="btn btn_cta" type="submit" name="send" id="">
+            <input class="btn btn_cta" type="submit" name="submit" id="submit">
+            <br />
+            <div class="result">
+				<?php echo $result; ?>	
+			</div>
         </form>
     </section>
     <section class="contact_info_section text_center ptb_3">
@@ -127,6 +130,8 @@ if (isset($_POST['send'])) {
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
