@@ -46,7 +46,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="mael, Mael, Développeur Web">
-    <meta name="description" content="Mon portfolio en tant que développeur web">
+    <meta name="description" content="A partir de cette page, vous pouvez me contacter à mon adresse mail contact@maeldev.fr">
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -5,7 +5,7 @@
     <meta name="keywords" content="mael, Mael, Développeur Web" />
     <meta
       name="description"
-      content="Mon portfolio en tant que développeur web"
+      content="Accédez à mes articles de blog à partir de cette page ( Gratuitement, cela va de soi )"
     />
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,21 +32,33 @@
       </ul>
     </nav>
     <section class="blog-section text-center">
+      <br /><br /><br /><br /><br />
       <h1>Mon Blog</h1>
+      <br />
+      <input
+        id="searchbar"
+        onkeyup="search_articles()"
+        type="text"
+        name="search"
+        class="search-bar"
+        placeholder="Recherchez des articles.."
+      />
       <div class="blog-articles">
-        <a class="btn_cta" href="../articles/créer-un-bon-site-web"
+        <a class="btn_cta articles" href="../articles/créer-un-bon-site-web"
           >Créer un bon site web</a
         >
-        <a href="../articles/créer-une-404-personalisé" class="btn_cta"
-          >Créer une page d'errur 404 personalisé</a
+        <a href="../articles/créer-une-404-personalisé" class="btn_cta articles"
+          >Créer une page d'erreur 404 personalisé</a
         >
-        <a href="../articles/les-calls-to-actions" class="btn_cta"
+        <a href="../articles/les-calls-to-actions" class="btn_cta articles"
           >Créer de bon calls-to-actions</a
         >
-        <a href="../articles/dark-mode-automatique" class="btn_cta"
+        <a href="../articles/dark-mode-automatique" class="btn_cta articles"
           >Créer un dark mode automatique</a
         >
-        <a href="../articles/rendre-son-site-responsive" class="btn_cta"
+        <a
+          href="../articles/rendre-son-site-responsive"
+          class="btn_cta articles"
           >Rendre son site responsive</a
         >
       </div>
@@ -63,6 +75,20 @@
         </p>
       </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script>
+      function search_articles() {
+        let input = document.getElementById("searchbar").value;
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName("articles");
+
+        for (i = 0; i < x.length; i++) {
+          if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display = "none";
+          } else {
+            x[i].style.display = "list-item";
+          }
+        }
+      }
+    </script>
   </body>
 </html>

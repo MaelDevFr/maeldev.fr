@@ -4,7 +4,7 @@
 $main-text-color: #f4f4f4;
 $second-text-color: #1d1d1d;
 $web-width: 1280px;
-$primary-color: #7dff31;
+$primary-color: #fbea96;
 $main-bg-img: url("../img/pc_1280\ copie.jpg");
 
 * {
@@ -398,6 +398,14 @@ h6 {
 }
 
 .blog-section {
+  .search-bar {
+    border-radius: 10px;
+    border: 2px solid $primary-color;
+    background-color: transparent;
+    color: $primary-color;
+    padding: 10px;
+    width: 20rem;
+  }
   .blog-articles {
     display: grid;
     margin-top: 2rem;
@@ -405,6 +413,10 @@ h6 {
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
     width: auto;
+
+    .articles {
+      display: list-item;
+    }
   }
 }
 
