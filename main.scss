@@ -250,7 +250,7 @@ h6 {
 
   .projects-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     background-color: $second-text-color;
     color: $main-text-color;
 
@@ -330,6 +330,23 @@ h6 {
     .fas {
       color: $second-text-color;
       background-color: $main-text-color;
+    }
+  }
+  .more-informations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    .techno {
+      .img {
+        height: 180px;
+        width: 320px;
+      }
+      hr {
+        border-color: $primary-color;
+      }
+      .about-techno {
+        height: 200px;
+      }
     }
   }
 }
@@ -420,8 +437,28 @@ h6 {
   }
 }
 
-.code {
-  background-color: rgb(95, 94, 92);
+.blog {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 1.5rem;
+  text-transform: none;
+
+  .article {
+    width: 95%;
+    color {
+      color: $primary-color;
+      font-weight: bold;
+    }
+    .step-separation {
+      height: 3.5vh;
+    }
+    .step {
+      color: $primary-color;
+    }
+    .link-blog {
+      text-decoration: underline;
+    }
+  }
 }
 
 .main-footer {
@@ -431,16 +468,6 @@ h6 {
     .contact-footer {
       margin-left: 3rem;
     }
-  }
-}
-
-.how-create-a-good-website {
-  padding: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-
-  .step {
-    text-decoration: underline;
-    font-size: large;
   }
 }
 
@@ -548,6 +575,9 @@ h6 {
     .skills {
       text-align: center;
     }
+    .more-informations {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 .header-blog {
@@ -557,16 +587,6 @@ h6 {
 .footer-blog {
   height: 3rem;
   width: 30rem;
-}
-.blog {
-  font-family: sans-serif;
-  font-size: 20px;
-  padding: 1.5rem;
-  text-transform: none;
-
-  strong {
-    color: $primary-color;
-  }
 }
 
 @media (max-width: 1250px) {
@@ -594,27 +614,35 @@ h6 {
   }
 }
 @media (max-width: 480px) {
-  .header-blog {
-    height: 3rem;
-    width: 30rem;
-  }
-  .footer-blog {
-    height: 3rem;
-    width: 30rem;
-  }
-  .main-footer {
-    .footer-content {
-      font-size: 15px;
+  .about_section_technologies {
+    .skills {
+      text-align: center;
+    }
+    .more-informations {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
-  .biographie {
-    grid-template-columns: repeat(2, 1fr);
+}
+.header-blog {
+  height: 3rem;
+  width: 30rem;
+}
+.footer-blog {
+  height: 3rem;
+  width: 30rem;
+}
+.main-footer {
+  .footer-content {
+    font-size: 15px;
   }
-  .blog-articles {
-    margin-top: 16rem;
-    position: relative;
-    top: 100px;
-  }
+}
+.biographie {
+  grid-template-columns: repeat(2, 1fr);
+}
+.blog-articles {
+  margin-top: 16rem;
+  position: relative;
+  top: 100px;
 }
 
 @media (prefers-color-scheme: dark) {

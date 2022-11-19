@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/prism.css" />
     <script
       src="https://kit.fontawesome.com/6a7d53791c.js"
       crossorigin="anonymous"
@@ -41,67 +42,68 @@
         width="100%"
         height="520px"
       />
-      <br /><br />
-      <strong class="step">Step 1 : Qu'est-ce que le responsive ? </strong
-      ><br /><br />
-      • Le responsive est le terme employé pour désigner un site web s'adaptant
-      à des tailles d'écrans différentes. <br />
-      Il y a principalement, 3 tailles d'écrans à gérer : Le téléphone
-      <strong>(480px)</strong>, la tablette <strong>(780px)</strong> et les
-      ordinateur <strong>(1280px)</strong>
-      <br />
-      Rendre son site web responsive est OBLIGATOIRE. Au minimum pour les
-      téléphones et les ordinateurs <br />
-      car vous ouvrirez votre site à une audience plus large <br /><br />
-      <strong class="step">Step 2 : Le code : </strong><br /><br />
-      • Pour rendre son site responsive, il vous faudra lier un fichier html à
-      un fichier css <br />
-      Ps : Je pars du principe que vous avez les bases de html & css pour ce
-      tuto. <br />
-      Et nous allons utiliser la même chose que pour
-      <strong
-        ><a href="./dark-mode-automatique">le tuto du dark mode</a></strong
-      >
-      à savoir une media querie qui va fonctionner <br />
-      de façon à ce que si la taille de l'écran du visiteur est inférieur ou
-      égal à celle donnée,
-      <br />
-      alors il va lui afficher la page avec les modifications dans la media
-      querie mais tout <br />
-      en prenant en compte les éléments non modifiés qui ne sont pas dans la
-      media querie ( pas besoin de remettre tout votre code, <br />
-      juste ce que vous voulez modifier)
-      <br />
-      <br />
-      <div class="code text-center">
-        <br />
-        <h5>
-          @media (max-width: 480px) {<br />
-          html{width: 50%}<br />}
-        </h5>
-        <br />
+      <div class="step-separation"></div>
+      <div class="article">
+        <strong class="step">Step 1 : Qu'est-ce que le responsive ? </strong>
+        <div class="step-separation"></div>
+        • Le responsive est le terme employé pour désigner un site web
+        s'adaptant à des tailles d'écrans différentes. Il y a principalement, 3
+        tailles d'écrans à gérer : Le téléphone
+        <color>(480px)</color>, la tablette <color>(780px)</color> et les
+        ordinateur <color>(1280px)</color>
+
+        Rendre son site web responsive est OBLIGATOIRE. Au minimum pour les
+        téléphones et les ordinateurs car vous ouvrirez votre site à une
+        audience plus large
+        <div class="step-separation"></div>
+        <strong class="step">Step 2 : Le code : </strong>
+        <div class="step-separation"></div>
+        • Pour rendre son site responsive, il vous faudra lier un fichier html à
+        un fichier css Ps : Je pars du principe que vous avez les bases de html
+        & css pour ce tuto. Et nous allons utiliser la même chose que pour
+        <color
+          ><a class="link-blog" href="./dark-mode-automatique"
+            >le tuto du dark mode</a
+          ></color
+        >
+        à savoir une media querie qui va fonctionner de façon à ce que si la
+        taille de l'écran du visiteur est inférieur ou égal à celle donnée,
+        alors il va lui afficher la page avec les modifications dans la media
+        querie mais tout en prenant en compte les éléments non modifiés qui ne
+        sont pas dans la media querie ( pas besoin de remettre tout votre code,
+        juste ce que vous voulez modifier)
+        <div class="step-separation"></div>
+        <div class="code text-center">
+          <br />
+          <h5>
+            <code class="language-css">
+              @media (max-width: 480px) { html{width: 50%}}
+            </code>
+          </h5>
+          <br />
+        </div>
+        <div class="step-separation"></div>
+        Et voilà, vous pouvez à présent modifier les éléments que vous souhaitez
+        dans la media querie. Ps : Cet exemple vous donnera un site responsive
+        pour téléphone.
+        <div class="step-separation"></div>
+        <strong class="step">Ps : Et bootstrap dans tout ça ?</strong>
+        <div class="step-separation"></div>
+        Ah ! Voilà une question qui vous intéresse peut être. Vous avez peut
+        être déjà entendus parler de "bootstrap" comme "le framework css qui
+        rend ton site responsive" Et bien <color>ne l'utilisez pas !</color>
+        Pourquoi ? Car avec un outil comme bootstrap vous êtes bien trop
+        dépendant de l'outil. Certes il peut être pratique des des cas très
+        spécifiques mais si votre but est de créer un bon site internet avec un
+        beau design, bootstrap n'est pas la solution et privilégiez du CSS pure.
+        Mais si vous voulez tout de même utiliser un framework css, alors
+        <color
+          ><a class="link-blog" href="https://tailwindcss.com/"
+            >tailwindCss</a
+          ></color
+        >
+        vous conviendra mieux.
       </div>
-      <br />
-      Et voilà, vous pouvez à présent modifier les éléments que vous souhaitez
-      dans la media querie. <br />
-      Ps : Cet exemple vous donnera un site responsive pour téléphone.
-      <br /><br />
-      <strong class="step">Ps : Et bootstrap dans tout ça ?</strong>
-      <br /><br />
-      Ah ! Voilà une question qui vous intéresse peut être. Vous avez peut être
-      <br />
-      déjà entendus parler de "bootstrap" comme "le framework css qui rend ton
-      site responsive" Et bien <strong>ne l'utilisez pas !</strong> <br />
-      Pourquoi ? <br />
-      Car avec un outil comme bootstrap vous êtes bien trop dépendant de
-      l'outil. Certes il peut être pratique <br />
-      des des cas très spécifiques mais si votre but est de créer un bon site
-      internet <br />
-      avec un beau design, bootstrap n'est pas la solution et privilégiez du CSS
-      pure. Mais si <br />
-      vous voulez tout de même utiliser un framework css, alors
-      <strong><a href="https://tailwindcss.com/">tailwindCss</a></strong> vous
-      conviendra mieux.
     </div>
     <footer class="main-footer ptb_3">
       <div class="footer-content container text-center">
@@ -114,6 +116,7 @@
         </p>
       </div>
     </footer>
+    <script src="../js/prism.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

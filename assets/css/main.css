@@ -187,7 +187,7 @@ h6 {
     width: 635px; }
   .projects .projects-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     background-color: #1d1d1d;
     color: #f4f4f4; }
     .projects .projects-content ul {
@@ -241,6 +241,17 @@ h6 {
   .about_section_technologies .technologies .fas {
     color: #1d1d1d;
     background-color: #f4f4f4; }
+  .about_section_technologies .more-informations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem; }
+    .about_section_technologies .more-informations .techno .img {
+      height: 180px;
+      width: 320px; }
+    .about_section_technologies .more-informations .techno hr {
+      border-color: #fbea96; }
+    .about_section_technologies .more-informations .techno .about-techno {
+      height: 200px; }
 
 .contact_section form {
   width: 960px;
@@ -304,20 +315,27 @@ h6 {
   .blog-section .blog-articles .articles {
     display: list-item; }
 
-.code {
-  background-color: #5f5e5c; }
+.blog {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 1.5rem;
+  text-transform: none; }
+  .blog .article {
+    width: 95%; }
+    .blog .article color {
+      color: #fbea96;
+      font-weight: bold; }
+    .blog .article .step-separation {
+      height: 3.5vh; }
+    .blog .article .step {
+      color: #fbea96; }
+    .blog .article .link-blog {
+      text-decoration: underline; }
 
 .main-footer .footer-content {
   color: #1d1d1d; }
   .main-footer .footer-content .contact-footer {
     margin-left: 3rem; }
-
-.how-create-a-good-website {
-  padding: 1rem;
-  font-family: Arial, Helvetica, sans-serif; }
-  .how-create-a-good-website .step {
-    text-decoration: underline;
-    font-size: large; }
 
 @media (max-width: 850px) {
   .p_0 {
@@ -379,7 +397,9 @@ h6 {
         margin-top: 1.7rem; }
 
   .about_section_technologies .skills {
-    text-align: center; } }
+    text-align: center; }
+  .about_section_technologies .more-informations {
+    grid-template-columns: repeat(2, 1fr); } }
 .header-blog {
   height: 3rem;
   width: 100%; }
@@ -387,14 +407,6 @@ h6 {
 .footer-blog {
   height: 3rem;
   width: 30rem; }
-
-.blog {
-  font-family: sans-serif;
-  font-size: 20px;
-  padding: 1.5rem;
-  text-transform: none; }
-  .blog strong {
-    color: #fbea96; }
 
 @media (max-width: 1250px) {
   .projects-section .project {
@@ -408,24 +420,29 @@ h6 {
     .main-footer .footer-content .contact_footer {
       margin: 0; } }
 @media (max-width: 480px) {
-  .header-blog {
-    height: 3rem;
-    width: 30rem; }
+  .about_section_technologies .skills {
+    text-align: center; }
+  .about_section_technologies .more-informations {
+    grid-template-columns: repeat(1, 1fr); } }
+.header-blog {
+  height: 3rem;
+  width: 30rem; }
 
-  .footer-blog {
-    height: 3rem;
-    width: 30rem; }
+.footer-blog {
+  height: 3rem;
+  width: 30rem; }
 
-  .main-footer .footer-content {
-    font-size: 15px; }
+.main-footer .footer-content {
+  font-size: 15px; }
 
-  .biographie {
-    grid-template-columns: repeat(2, 1fr); }
+.biographie {
+  grid-template-columns: repeat(2, 1fr); }
 
-  .blog-articles {
-    margin-top: 16rem;
-    position: relative;
-    top: 100px; } }
+.blog-articles {
+  margin-top: 16rem;
+  position: relative;
+  top: 100px; }
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1d1d1d;

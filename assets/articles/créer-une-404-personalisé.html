@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/prism.css" />
     <script
       src="https://kit.fontawesome.com/6a7d53791c.js"
       crossorigin="anonymous"
@@ -43,30 +44,33 @@
         width="100%"
         height="520px"
       />
-      <br /><br />
-      <strong class="step">Step 1 : Un fichier spécial : </strong><br /><br />
-      • Pour avoir une page d'erreur personalisée il vous faut un fichier
-      spécial dans votre code <br />
-      Ps : A noter que je pars du principe que vous possédez un serveur apache
-      pour ce tuto. <br />
-      Ce fichier doit être nommé <strong>.htaccess</strong> et vous devez
-      insérer dedans le code suivant : <br /><br />
-      <div class="code text-center">
+      <div class="step-separation"></div>
+      <div class="article">
+        <strong class="step">Step 1 : Un fichier spécial : </strong>
+        <div class="step-separation"></div>
+        • Pour avoir une page d'erreur personalisée il vous faut un fichier
+        spécial dans votre code Ps : A noter que je pars du principe que vous
+        possédez un serveur apache pour ce tuto. Ce fichier doit être nommé
+        <strong>.htaccess</strong> et vous devez insérer dedans le code suivant
+        :
+        <div class="step-separation"></div>
+        <div class="code text-center">
+          <br />
+          <h5>ErrorDocument 404 /erreur404.html</h5>
+          <br />
+        </div>
         <br />
-        <h5>ErrorDocument 404 /erreur404.html</h5>
+        Vous devez également créer un fichier à la racine de votre projet nommé
         <br />
+        <strong>erreur404.html</strong>
+        <div class="step-separation"></div>
+        <strong class="step">Step 2 : Le contenu : </strong>
+        <div class="step-separation"></div>
+        • Pour faire une bonne page d'erreur 404, vous devez mettre
+        l'utilisateur sur la bonne voie, avec maximum 2 calls to action. L'un
+        pour revenir sur la page d'acueil et l'autre si besoin vers la partie
+        contact du site si une erreur c'est produite
       </div>
-      <br />
-      Vous devez également créer un fichier à la racine de votre projet nommé
-      <br />
-      <strong>erreur404.html</strong>
-      <br /><br />
-      <strong class="step">Step 2 : Le contenu : </strong><br /><br />
-      • Pour faire une bonne page d'erreur 404, vous devez mettre l'utilisateur
-      sur la bonne voie, avec <br />
-      maximum 2 calls to action. L'un pour revenir sur la page d'acueil et
-      l'autre si besoin vers la partie <br />
-      contact du site si une erreur c'est produite
     </div>
     <footer class="main-footer ptb_3">
       <div class="footer-content container text-center">
@@ -79,6 +83,7 @@
         </p>
       </div>
     </footer>
+    <script src="../js/prism.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
