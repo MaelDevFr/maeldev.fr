@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="mael, Mael, Développeur Web, golang, installer golang, go, Go, GoLang, Golang"
+    />
+    <meta
+      name="description"
+      content="Découvrez le langage de programmation 'golang' avec moi !"
+    />
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/prism.css" />
+    <script
+      src="https://kit.fontawesome.com/6a7d53791c.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction à GoLang</title>
+  </head>
+  <body>
+    <nav class="header-content">
+      <a href="../../index">
+        <h1 class="logo-title">MD</h1>
+      </a>
+      <ul>
+        <li class="header"><a href="../sources/project">Projets</a></li>
+        <li class="header"><a href="../sources/skills">Skills</a></li>
+        <li class="header"><a href="../sources/contact.php">Contact</a></li>
+        <li class="header">
+          <a class="active-page" href="../sources/blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+    <br /><br /><br /><br /><br />
+    <h1 class="text-center">Introduction à GoLang</h1>
+    <h5 class="text-center"><strong>12m de lecture</strong></h5>
+    <div class="blog">
+      <img
+        src="../img/golang-articles.png"
+        alt="Website's img"
+        width="100%"
+        height="520px"
+      />
+      <div class="step-separation"></div>
+      <div class="article">
+        <strong class="step">Step 1 : Qu'est-ce que GoLang ? </strong>
+        <div class="step-separation"></div>
+        • GoLang est un <color>langage de programmation</color> créer par Google
+        qui à été lancé pour la première fois en 2009. C'est un langage compilé
+        dont la syntaxe est très ressemblante à celle de Python et de C. Le
+        langage est écrit en C et est considéré comme un langage 'bas-niveau' (
+        proche du processeur ). Si vous avez observé mon site, vous devez savoir
+        que j'adore ce langage pour une bonne raison : On peut tout faire en Go
+        ! Applications web, apps desktop, tâches systèmes etc... tout ça très
+        simplement. En effet, le GoLang à pour slogan d'être un langage de
+        programmation "beginner-friendly". En effet le GoLang n'a que 25 mots
+        clés là ou JavaScript en à 64. De plus, Go à développé son écosystème
+        avec une masse de packages & frameworks au point où, aujourd'hui,
+        n'importe quelle tâche peut être réalisée en Go.
+        <div class="step-separation"></div>
+        <strong class="step">Step 2 : Comment on l'installe : </strong>
+        <div class="step-separation"></div>
+        • Franchement, de ce côté là, Go à réalisé la perfection. Vous n'avez
+        qu'un package à installer sur votre machine, quelques variables à
+        définir et... c'est tout ! Pour installer Go rendez vous
+        <a class="link-blog" href="https://go.dev/dl/">ici</a> et télécharger la
+        version de go adaptée pour votre OS. Une fois que ceci est fait, vous
+        devez avoir à la racine de votre disque dur un dossier nommé "go".
+        Ouvrez ce dossier et créer un dossier et appelez-le "src", ce sera
+        là-dedans que vous stockerez vos projets GO. Ensuite, définissez une
+        variable d'environnement et nommez-là <color>GOPATH</color> et
+        définissez-là dans le dossier "go".
+        <br />
+        Pour définir une variable d'environnement sous windows :
+        <div class="step-separation"></div>
+        <div class="code text-center">
+          <br />
+          <h5>GOPATH=votreChemin</h5>
+          <br />
+        </div>
+        <br />
+        Et pour définir sous macOS ou linux :
+        <div class="step-separation"></div>
+        <div class="code text-center">
+          <br />
+          <h5>export GOPATH=votreChemin</h5>
+          <br />
+        </div>
+        <br />
+        Une fois que c'est fait, vous pouvez si vous le souhaitez ( je vous le
+        recommande ) installer l'extension VSCode <color>"Go"</color> pour avoir
+        une meilleur confort de coding. <br />
+        Et voilà ! C'est fait, c'était rapide n'est-ce pas ? Sachez que ce n'est
+        que le début !
+        <div class="step-separation"></div>
+        <strong class="step">Step 3 : Hello World : </strong>
+        <div class="step-separation"></div>
+        <div class="code text-center">
+          <br />
+          <pre class="language-go" tabindex="0" data-src-status="loaded">
+            <code class="langague-go">
+                <span class="">package main</span>
+                <br>
+                <span class="">import "fmt"</span>
+                <br>
+                <span class="">func main() {</span>
+                <span class="">  fmt.println("Hello World !")</span>
+                <span class="">}</span>
+            </code>
+          </pre>
+          <br />
+        </div>
+        <div class="step-separation"></div>
+        • Examinons à présent ce code. On va décomposer ce code en plusieurs
+        morceaux. <br />
+        1) Le "package main", cette ligne permets de définir dans quel package
+        le fichier s'inscrit. Cela vous sera utile lorsque vous décomposerez vos
+        gros fichiers en plusieurs petits. <br />
+        2) Le "import "fmt"", cette ligne permets d'importer un module Go. C'est
+        très important car sans ce module, vous ne pouvez pas print dans la
+        console. <br />
+        3) La fonction main. Cette fonction est très importante car c'est elle
+        qui va s'éxécuter, elle et aucune autre variable. Vous devez mettre dans
+        la fonction main les fonctions externes que vous voulez utiliser. Chaque
+        projet ne doit avoir en théorie qu'une seule variable main.
+        <div class="step-separation"></div>
+        <strong class="step">Step 4 : La compilation : </strong>
+        <div class="step-separation"></div>
+        • Et voilà, après une journée de dur labeur, vous avez enfin fini votre
+        code Go. Maintenant, il faut le mettre en production et le compiler. Sur
+        ce point là, encore une fois, golang nous surprends par sa rapidité et
+        sa facilité de compilation cross-plateform. Ce que Go fait lorsque vous
+        compilé un programme, c'est qu'il va créer un fichier binnaire pour l'os
+        que vous avez demandé ou si vous n'avez pas précisé quel os, il va
+        compiler pour votre os. Bon, c'est bien beau mais, comment on fait ?
+        Nous allons partir du principe que vous voulez compilé pour votre os. En
+        réalité c'est très très simple, rentrez simplement dans votre terminal
+        cette commande :
+        <div class="step-separation"></div>
+        <div class="code text-center">
+          <br />
+          <h5>go build main.go</h5>
+          <br />
+        </div>
+        <br />
+        Et voilà, quelques secondes plus tard, vous avez un fichier que vous
+        pouvez exécuter qui s'est créer ! C'est pas de la magie, juste GoLang.
+        <div class="step-separation"></div>
+        <strong class="step">Step 5 : Conclusion : </strong>
+        <div class="step-separation"></div>
+        • En bref, je pense que vous l'avez deviné mais GoLang est, selon moi,
+        l'un des meilleurs langages de programmation disponible sur le marché.
+        Il peut clairement concurrencer JavaScript si seulement il était si
+        connus que ce dernier. Mais ne vous découragez pas ! Devenez un Gopher
+        et agrandissez la communauté golang !
+      </div>
+    </div>
+    <footer class="main-footer ptb_3">
+      <div class="footer-content container text-center">
+        <p>
+          Copyright &copy; 2022 Maël Dev. Tous droits réservés.
+          <span class="contact-footer"
+            >Email :
+            <a href="mailto:contact@maeldev.fr">contact@maeldev.fr</a></span
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="../js/prism.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
