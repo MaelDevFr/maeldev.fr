@@ -123,11 +123,24 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
         </div>
     </section>
     <footer class="main-footer ptb_3">
-        <div class="footer-content container text-center">
-            <p>Copyright &copy; 2022 Maël Dev. Tous droits
-                réservés. <span class="contact-footer">Email : <a href="mailto:contact@maeldev.fr">contact@maeldev.fr</a></span>
-            </p>
-        </div>
+      <div class="footer-content container text-center">
+        <p>
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"
+            ><img
+              alt="Licence Creative Commons"
+              style="border-width: 0"
+              src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a
+          ><br />Cette œuvre est mise à disposition selon les termes de la
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"
+            >Licence Creative Commons Attribution - Pas d’Utilisation
+            Commerciale 4.0 International</a
+          >.
+          <span class="contact-footer"
+            >Email :
+            <a href="mailto:contact@maeldev.fr">contact@maeldev.fr</a></span
+          >
+        </p>
+      </div>
     </footer>
     <script src="../js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
