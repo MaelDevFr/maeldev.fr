@@ -559,8 +559,8 @@ h6 {
   .about_section_technologies .skills {
     text-align: center;
   }
-  .about_section_technologies .more-informations {
-    grid-template-columns: repeat(1, 1fr);
+  .biographie {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .header-blog {
@@ -575,10 +575,6 @@ h6 {
 
 .main-footer .footer-content {
   font-size: 15px;
-}
-
-.biographie {
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .blog-articles {
